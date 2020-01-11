@@ -11,14 +11,15 @@ public interface CodeExampleService {
 
     /**
      * 添加一个实例
-     * @param codeExample
-     * @return
+     * @param codeExample object
+     * @return boolean
      */
     boolean addExample(CodeExample codeExample);
 
     /**
      * 查询一个code
-     * @return
+     * @param id id
+     * @return object
      */
     CodeExample getById(Integer id);
 }
