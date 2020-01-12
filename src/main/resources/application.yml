@@ -11,4 +11,6 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
 #    hibernate:
+server:
+  port: 8081
 #      ddl-auto: create

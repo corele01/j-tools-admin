@@ -143,6 +143,9 @@ public class JsonFormat {
     }
 
     private void checkString() {
+        if (formatStr.length() < 2){
+            throw new IllegalArgumentException("The string not is json");
+        }
         String firstChar = formatStr.substring(0, 2);
         String lastChar = formatStr.substring(formatStr.length()-1);
         if (isCheck(firstChar, lastChar)){
