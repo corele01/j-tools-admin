@@ -22,12 +22,12 @@ public class CodeServiceImpl implements CodeService {
     /**
      * 获取一个code
      *
-     * @param id
+     * @param codeName
      * @return
      */
     @Override
-    public CodeExampleVO getById(Integer id) {
-        CodeExample codeExample = this.codeExampleService.getById(id);
+    public CodeExampleVO getById(String codeName) {
+        CodeExample codeExample = this.codeExampleService.getByCodeName(codeName);
         if (codeExample == null){
             return null;
         }

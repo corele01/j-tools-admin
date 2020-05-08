@@ -1,26 +1,30 @@
 package com.corele.jtools.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.core.index.CompoundIndex;
+import org.springframework.data.mongodb.core.index.CompoundIndexes;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
 import java.time.LocalDateTime;
 
 /**
  * @author liujun
  */
-@Data
-@Entity
+@Getter
+@Setter
+@Document("code-example")
+@CompoundIndexes({
+        @CompoundIndex(unique = true,name = "idx_codeName",def ="{codeName:1}" )
+})
 public class CodeExample {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Integer id;
+    private ObjectId id;
+    private String codeName;
     private Integer codeType;
-    @Column(columnDefinition = "longtext")
     private String codeExample;
-    @Column(columnDefinition = "timestamp")
     private LocalDateTime gmtCreate;
-    @Column(columnDefinition = "timestamp")
     private LocalDateTime gmtModify;
 }

@@ -11,10 +11,10 @@ public interface CodeService {
 
     /**
      * 获取一个code
-     * @param id
+     * @param codeName 标识
      * @return
      */
-    CodeExampleVO getById(Integer id);
+    CodeExampleVO getById(String codeName);
 
     /**
      * 添加一个code

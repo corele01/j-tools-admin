@@ -11,14 +11,15 @@ public interface CodeExampleService {
 
     /**
      * 添加一个实例
-     * @param codeExample
-     * @return
+     * @param codeExample 片段实例
+     * @return 是否成功
      */
     boolean addExample(CodeExample codeExample);
 
     /**
      * 查询一个code
-     * @return
+     * @param codeName 片段标识
+     * @return 代码片段
      */
-    CodeExample getById(Integer id);
+    CodeExample getByCodeName(String codeName);
 }

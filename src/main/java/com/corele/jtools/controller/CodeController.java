@@ -35,12 +35,12 @@ public class CodeController {
 
     /**
      * 获取一个code
-     * @param id
+     * @param codeName
      * @return
      */
-    @GetMapping("example/{id}")
-    public BaseResponse<CodeExampleVO> getExample(@PathVariable Integer id){
-        CodeExampleVO res = this.codeService.getById(id);
+    @GetMapping("example/{codeName}")
+    public BaseResponse<CodeExampleVO> getExample(@PathVariable String codeName){
+        CodeExampleVO res = this.codeService.getById(codeName);
         return BaseResponse.success(res);
     }
 }
