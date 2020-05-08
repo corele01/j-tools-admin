@@ -32,7 +32,7 @@ public class CodeServiceImpl implements CodeService {
             return null;
         }
         CodeExampleVO result = new CodeExampleVO();
-        result.setId(codeExample.getId());
+        result.setCodeName(codeExample.getCodeName());
         result.setCodeType(codeExample.getCodeType());
         result.setCodeExample(codeExample.getCodeExample());
         return result;

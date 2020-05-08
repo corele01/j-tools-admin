@@ -3,5 +3,5 @@ spring:
     name: j-tools-api
   data:
     mongodb:
-      uri: mongodb://${MONGO_HOST:localhost}/igame
+      uri: mongodb://${MONGO_HOST:localhost}/j-tools
       auto-index-creation: true

@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 public class CodeExampleVO {
 
-    private Integer id;
+    private String codeName;
     private Integer codeType;
     private String codeExample;
 }
