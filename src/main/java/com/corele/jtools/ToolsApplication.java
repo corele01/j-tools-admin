@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author liujun
  */
 @SpringBootApplication
-public class JToolsApplication {
+public class ToolsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JToolsApplication.class, args);
+		SpringApplication.run(ToolsApplication.class, args);
 	}
 
 }
